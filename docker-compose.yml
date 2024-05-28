@@ -1,4 +1,4 @@
-version: '2'
+version: '1'
 services:
   #Ejecuta un servicio para realizar sumas en el puerto 3030
   suma:
