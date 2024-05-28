@@ -1,50 +1,68 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Calculadora</title>
-        <link rel="stylesheet" href="styles/estilos.css">
-        <script src="scripts/script.js" text="text/javascript"></script>
-    </head>
-    <body class="body">        
-        <div class="conent">
-            <div class="display">
-                <div>
-                    <p class="texto_arriba" id="texto_arriba"></p>
-                </div>
-                <div>
-                    <h3 class="texto" id="operacion"></h3>
-                    <p class="texto" id="display"></p>
-                </div>
+<head>
+    <!-- Define el título de la página -->
+    <title>Calculadora</title>
+    <!-- Enlaza el archivo de estilos externo -->
+    <link rel="stylesheet" href="styles/estilos.css">
+    <!-- Enlaza el archivo de script externo -->
+    <script src="scripts/script.js" text="text/javascript"></script>
+</head>
+<body class="body">
+    <!-- Contenedor principal -->
+    <div class="conent">
+        <!-- Display de la calculadora -->
+        <div class="display">
+            <div>
+                <!-- Muestra la operación actual en la parte superior del display -->
+                <p class="texto_arriba" id="texto_arriba"></p>
             </div>
-            <div class="numeros_panel">
-                <div class="numeros">
-                    <input class="numero" type="button" value="7" onclick="digitarNumero('7')"/>
-                    <input class="numero" type="button" value="8" onclick="digitarNumero('8')"/>
-                    <input class="numero" type="button" value="9" onclick="digitarNumero('9')"/>
-                    <input class="operacion" type="button" value="+" onclick="sumar()"/>
-                </div>
-                <div class="numeros">        
-                    <input class="numero" type="button" value="4" onclick="digitarNumero('4')"/>
-                    <input class="numero" type="button" value="5" onclick="digitarNumero('5')"/>
-                    <input class="numero" type="button" value="6" onclick="digitarNumero('6')"/>
-                    <input class="operacion" type="button" value="-" onclick="restar()"/>
-                </div>
-                <div class="numeros">
-                    <input class="numero" type="button" value="1" onclick="digitarNumero('1')"/>
-                    <input class="numero" type="button" value="2" onclick="digitarNumero('2')"/>
-                    <input class="numero" type="button" value="3" onclick="digitarNumero('3')"/>
-                    <input class="operacion" type="button" value="x" onclick="multiplicar()"/>
-                </div>
-                <div class="numeros">
-                    <input class="numero" type="button" value="0" onclick="digitarNumero('0')"/>
-                    <input class="numero" type="button" value="<--" onclick="borrar()">
-                    <input class="numero" type="button" value="AC" onclick="borrarTodo()"/>
-                    <input class="operacion" type="button" value="/" onclick="dividir()"/>
-                </div>
-                <div class="resultado">
-                    <input class="igual" type="button" value="=" onclick="obtenerResultado()"/>
-                </div>
+            <div>
+                <!-- Muestra el símbolo de la operación actual y el número ingresado -->
+                <h3 class="texto" id="operacion"></h3>
+                <p class="texto" id="display"></p>
             </div>
         </div>
-    </body>
+        <!-- Panel de botones numéricos y de operaciones -->
+        <div class="numeros_panel">
+            <!-- Primera fila de números y operaciones -->
+            <div class="numeros">
+                <!-- Botones numéricos del 7 al 9 y botón de suma -->
+                <input class="numero" type="button" value="7" onclick="digitarNumero('7')"/>
+                <input class="numero" type="button" value="8" onclick="digitarNumero('8')"/>
+                <input class="numero" type="button" value="9" onclick="digitarNumero('9')"/>
+                <input class="operacion" type="button" value="+" onclick="sumar()"/>
+            </div>
+            <!-- Segunda fila de números y operaciones -->
+            <div class="numeros">        
+                <!-- Botones numéricos del 4 al 6 y botón de resta -->
+                <input class="numero" type="button" value="4" onclick="digitarNumero('4')"/>
+                <input class="numero" type="button" value="5" onclick="digitarNumero('5')"/>
+                <input class="numero" type="button" value="6" onclick="digitarNumero('6')"/>
+                <input class="operacion" type="button" value="-" onclick="restar()"/>
+            </div>
+            <!-- Tercera fila de números y operaciones -->
+            <div class="numeros">
+                <!-- Botones numéricos del 1 al 3 y botón de multiplicación -->
+                <input class="numero" type="button" value="1" onclick="digitarNumero('1')"/>
+                <input class="numero" type="button" value="2" onclick="digitarNumero('2')"/>
+                <input class="numero" type="button" value="3" onclick="digitarNumero('3')"/>
+                <input class="operacion" type="button" value="x" onclick="multiplicar()"/>
+            </div>
+            <!-- Cuarta fila de números y operaciones -->
+            <div class="numeros">
+                <!-- Botón numérico 0, botón de retroceso, botón de limpiar y botón de división -->
+                <input class="numero" type="button" value="0" onclick="digitarNumero('0')"/>
+                <input class="numero" type="button" value="<--" onclick="borrar()">
+                <input class="numero" type="button" value="AC" onclick="borrarTodo()"/>
+                <input class="operacion" type="button" value="/" onclick="dividir()"/>
+            </div>
+            <!-- Fila del botón de resultado -->
+            <div class="resultado">
+                <!-- Botón de igual para obtener el resultado -->
+                <input class="igual" type="button" value="=" onclick="obtenerResultado()"/>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

@@ -1,23 +1,33 @@
 version: '2'
 services:
+  #Ejecuta un servicio para realizar sumas en el puerto 3030
   suma:
     build: ./suma
     ports:
       - "3030:3030"
+
+  #Ejecuta un servicio para realizar restas en el puerto 4040
   resta:
     build: ./resta
     ports:
       - "4040:4040"
+
+  #Ejecuta un servicio para realizar multiplicaiones en el puerto 5050
   multiplicacion:
     build: ./multiplicacion
     ports:
       - "5050:5050"
+
+  #Ejecuta un servicio para realizar divisiones en el puerto 6060
   division:
     build: ./division
     ports:
       - "6060:6060"
+
+  #Ejecuta un servicio de interfaz en el puerto 8080 que se comunica con los otros servicios
   interfaz:
     build: ./interfaz
+    # Establece vínculos (links) con los otros servicios para permitir la comunicación entre contenedores
     links:
       - suma
       - resta
@@ -25,5 +35,6 @@ services:
       - division
     ports:
       - "8080:8080"
+    # Mapea el directorio local ./interfaz al directorio /usr/src/app dentro del contenedor
     volumes:
       - ./interfaz:/usr/src/app
